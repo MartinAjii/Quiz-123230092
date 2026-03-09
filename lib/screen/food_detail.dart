@@ -35,7 +35,7 @@ class FoodDetailPage extends StatelessWidget {
                 const SizedBox(height: 20),
 
                 Text(
-                  "${food.name} ${food.category}",
+                  "${food.name}, ${food.category}",
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,

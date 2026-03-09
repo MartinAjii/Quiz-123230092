@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("Login", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              Text("Welcome back to MiniLens!"),
+              Text("Welcome to UjangResto"),
               _usmField(_usmController),
               _pwField(_pwController),
               _btnLogin()

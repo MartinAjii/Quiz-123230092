@@ -29,19 +29,57 @@ class FoodDetailPage extends StatelessWidget {
                 ),
               ),
             ),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 20),
 
                 Text(
-                  "${food.name} (${food.category})",
+                  "${food.name} ${food.category}",
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+
+                Text(
+                  "Harga ${food.price}, Kalori ${food.calories}",
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+
+                Text(
+                  "${food.description} ",
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+
+                Text(
+                  "Komposisi ${food.ingredients} ",
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+
+              const SizedBox(height: 4),
+
+                SizedBox(
+                  width: 500,
+                  child: ElevatedButton(
+                    onPressed: () {
+
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text("Membuat pesanan"),
+                        ),
+                      );
+                    },
+                    child: const Text("Checkout"),
+                  ),
+                )
               ]
             )
           ],
